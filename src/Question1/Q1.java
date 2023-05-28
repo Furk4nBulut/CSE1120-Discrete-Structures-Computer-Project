@@ -1,7 +1,9 @@
+package Question1;
+
 public class Q1 {
     public static void main(String[] args) {
         Q1 q1 = new Q1();
-        System.out.println(q1.validation(3));
+        System.out.println(q1.validation(5));
     }
     public int validation(int input) {
         //1 + 2 + 2^2+2^3 + .... + 2^n = 2^(n+1) - 1

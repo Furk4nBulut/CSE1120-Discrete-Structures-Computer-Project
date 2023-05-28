@@ -1,3 +1,5 @@
+package Question3;
+
 public class Q3 {
     // A recursive method to generate the nth Lucas number
     public static int lucas(int n) {
