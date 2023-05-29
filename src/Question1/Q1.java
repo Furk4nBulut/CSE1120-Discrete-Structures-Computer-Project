@@ -12,8 +12,6 @@ public class Q1 {
             sum += Math.pow(2, i);
             System.out.println("For "+ i + " sum is " +sum + " .");
         }
-
         return sum;
-
     }
 }
