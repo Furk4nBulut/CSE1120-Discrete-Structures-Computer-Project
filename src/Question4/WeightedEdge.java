@@ -1,9 +1,8 @@
 package Question4;
 
 public class WeightedEdge {
-    private GraphNode neighbor; // Komşu düğüm
-    private int weight; // Ağırlık
-
+    private GraphNode neighbor;
+    private int weight;
     public WeightedEdge(GraphNode neighbor, int weight) {
         this.neighbor = neighbor;
         this.weight = weight;

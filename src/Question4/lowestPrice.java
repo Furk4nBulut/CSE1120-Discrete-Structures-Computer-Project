@@ -52,10 +52,7 @@ public class lowestPrice {
         detroit.addNeighbor(losangeles, 349);
         detroit.addNeighbor(sanfrancisco, 329);
         detroit.addNeighbor(denver, 229);
-
-        //Our cost is 0 at the beginning
         int totalCost = 0;
-        //A switch chase to choose the city which you want to start
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the city you want to start: (Los Angeles, San Francisco, New York, Denver, Detroit))");
         String city = scanner.nextLine();
@@ -80,49 +77,28 @@ public class lowestPrice {
                 System.out.println("Please enter a valid city name!");
                 break;
         }
-
-        // An arraylist to keep the visited cities
         ArrayList<GraphNode> visitedCities = new ArrayList<>();
-
-        // Check the neighbors of current node and find the minimum cost
-        // Set it as the current node and avoid revisiting previously visited cities
         while (current.getNeighbors().size() > 0) {
             GraphNode minNode = null;
             int minCost = Integer.MAX_VALUE;
             for (WeightedEdge edge : current.getNeighbors()) {
                 if (edge.getWeight() < minCost && !visitedCities.contains(edge.getNeighbor())) {
                     minCost = edge.getWeight();
-                    minNode = edge.getNeighbor();
-                }
-            }
-
-            if (minNode == null) {
-                // All neighbors have been visited, exit the loop
-                break;
-            }
-
+                    minNode = edge.getNeighbor();} }
+            if (minNode == null) { break;}
             current.removeEdge(minNode);
             minNode.removeEdge(current);
-
             visitedCities.add(current);
-
             System.out.println("--------------------------------------------------");
             System.out.println("Your current location is " + current.getName());
             System.out.println("Going to " + minNode.getName() + " with cost " + minCost + "$");
             totalCost += minCost;
-            current = minNode;
-        }
-
+            current = minNode;}
         System.out.println("--------------------------------------------------");
         System.out.println("You have been visited in order: ");
         for (GraphNode cityNode : visitedCities) {
-            System.out.print(cityNode.getName()+" -> " );
-        }
+            System.out.print(cityNode.getName()+" -> " );}
         System.out.println(current.getName());
-
-
-
-
         System.out.println("Total cost: " + totalCost+ "$");
     }
 }

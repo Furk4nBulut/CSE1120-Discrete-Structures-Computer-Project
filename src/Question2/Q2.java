@@ -3,7 +3,6 @@ package Question2;
 import java.util.*;
 
 public class Q2 {
-
     // A helper method that checks if a function is one to one
     public static boolean isOneToOne(int[] f) {
         // Use a hash set to store the outputs
@@ -22,7 +21,6 @@ public class Q2 {
         // If no duplicates are found, return true
         return true;
     }
-
     // A main method that generates random functions and counts how many are one to one
     public static void main(String[] args) {
         // Define the domain and codomain sets

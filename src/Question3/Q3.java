@@ -30,4 +30,9 @@ public class Q3 {
             System.out.print(num + " ");
         }
     }
+
+    public static void main(String[] args) {
+        // Print the first 10 Lucas numbers
+        printLucas(10);
+    }
 }

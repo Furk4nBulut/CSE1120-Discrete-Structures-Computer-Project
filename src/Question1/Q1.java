@@ -10,7 +10,9 @@ public class Q1 {
         int sum = 0;
         for (int i = 0; i <= input; i++) {
             sum += Math.pow(2, i);
+            System.out.println("For "+ i + " sum is " +sum + " .");
         }
+
         return sum;
 
     }
